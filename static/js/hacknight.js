@@ -12,11 +12,16 @@
                     return date;
                 }
             }),
+            skip_dates = [
+                '2014-04-18'
+            ],
             $list = $('#schedule .list-group').empty(),
             schedule_item = tmpl('schedule_item');
 
         _.each(dates, function(date){
             if(date === undefined || $list.children().length === 4) {
+                return;
+            } else if (skip_dates.indexOf(date.toString('yyyy-MM-dd')) != -1) {
                 return;
             }
 
