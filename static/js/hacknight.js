@@ -13,7 +13,8 @@
                 }
             }),
             skip_dates = [
-                '2014-04-18'
+                '2014-04-18',
+                '2014-07-04'
             ],
             $list = $('#schedule .list-group').empty(),
             schedule_item = tmpl('schedule_item');
