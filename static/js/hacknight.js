@@ -8,7 +8,7 @@
             Date.today().next().month().next().month().first().friday(),
             Date.today().next().month().next().month().third().friday()
             ], function(date){
-                if(date > Date.today()){
+                if(date >= Date.today()){
                     return date;
                 }
             }),
