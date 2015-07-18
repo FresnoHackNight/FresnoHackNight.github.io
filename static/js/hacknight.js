@@ -2,19 +2,16 @@
     $(document).ready(function(){
         var dates = _.map([
             Date.today().first().friday(),
-            Date.today().third().friday(),
             Date.today().next().month().first().friday(),
-            Date.today().next().month().third().friday(),
             Date.today().next().month().next().month().first().friday(),
-            Date.today().next().month().next().month().third().friday()
+            Date.today().next().month().next().month().next().month().first().friday(),
+            Date.today().next().month().next().month().next().month().next().month().first().friday(),
             ], function(date){
                 if(date >= Date.today()){
                     return date;
                 }
             }),
             skip_dates = [
-                '2014-04-18',
-                '2014-07-04'
             ],
             $list = $('#schedule .list-group').empty(),
             schedule_item = tmpl('schedule_item');
